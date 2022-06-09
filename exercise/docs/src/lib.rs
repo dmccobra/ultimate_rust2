@@ -15,8 +15,21 @@
 // - Document the "roundness" field, explaining that it is a percentage
 // - Document the "orangeness" field, explaining that it is a number from 8 to 27
 
+/*!
+A pumpkin is a [cultivar](https://en.wikipedia.org/wiki/Cultivar) of [winter squash](https://en.wikipedia.org/wiki/Winter_squash) that is round with smooth, slightly ribbed skin, and is most often deep yellow to orange in coloration. The thick shell contains the seeds and pulp. The name is most commonly used for cultivars of Cucurbita pepo, but some cultivars of Cucurbita maxima, C. argyrosperma, and C. moschata with similar appearance are also sometimes called "pumpkins".
+
+![A beautiful pumpkin!](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/FrenchMarketPumpkinsB.jpg/700px-FrenchMarketPumpkinsB.jpg)
+*/
+
+/// Big orange thing
+///
+/// # Recipes
+///
+/// Coming soon!
 pub struct Pumpkin {
+    /// How close the pumking is to being spherical, expressed as a percentage from 0.0 (not at all) to 100.0 (completely)
     pub roundness: f32,
+    /// How close the color is to completely orange, from 8 (not very) to 27 (very)
     pub orangeness: i32,
 }
 
@@ -24,12 +37,16 @@ pub struct Pumpkin {
 // can't be used for pie. :'-(
 
 impl Pumpkin {
+    /*!
+     * Obliterates the pumpkin. Once this is called, the pumkin is gone and can't be used for pie. 😭
+     */
     pub fn smash(self) {}
 }
 
 // 5. Document that BURNT_ORANGE is for the "orangeness" field in the Pumpkin struct.
 // - Link to the Pumpkin struct in your description
 
+/// Used for the `orangeness` field in the [`Pumpkin`] struct
 pub const BURNT_ORANGE: i32 = 13;
 
 // Challenge: Find the option to pass to `cargo doc` so that documentation for this private item
